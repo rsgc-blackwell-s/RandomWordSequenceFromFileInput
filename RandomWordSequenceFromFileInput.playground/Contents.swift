@@ -111,7 +111,17 @@ Goal #1
 
 My algorithm
 ------------
+COUNT HOW MANY TIMES A WORD OCCURS
+-Create an empty dictionary (list of counts)(String is key)
+-Loop over the input string {
+-Build list of word counts (if word is nil... else... add 1)
+}
 
+CREATE PROBABILITIES FROM WORD COUNTS
+-Create empty dictionary (list of probabilites)(String is key)
+-Loop over list of word counts {
+-Word probabilities = word count/total word count * 100
+}
 
 My assumptions
 --------------
@@ -125,9 +135,30 @@ Probable data structures
 
 // Implement Goal #1 below...
 
+//create empty dictionary
+var wordCounts = [String: Int]()
+
+//loop over the input string
+//content.componentsSeparatedByString(" ")
+for word in words {
+    
+    //inspect each word
+    word
+    //build dictionary of word counts
+    if wordCounts[word] == nil {
+        wordCounts[word] = 1
+    } else {
+        wordCounts[word]! = wordCounts[word]! + 1
+    }
+    
+}
+//check
+wordCounts
 
 
-/*: 
+
+
+/*:
 
 ## Goal 2
 
