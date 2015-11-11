@@ -195,6 +195,10 @@ Goal #2
 
 My algorithm
 ------------
+-Create an empty dictionary to store probabilities
+-Loop over list of word counts,
+-Add entry based on: word count/total word count*100
+-Check to make sure the probabilities add to 100?
 
 
 My assumptions
@@ -207,7 +211,20 @@ My assumptions
 
 // Implement Goal #2 below...
 
+//get length of input string
+words.count
 
+//create empty dictionary to store word probabilities
+var wordProbabilities = [String: Float]()
+
+//loop over word counts
+for (word, count) in wordCounts {
+    
+    //add entry to new dictionary of probabilities
+    wordProbabilities[word] = Float(count) / Float(words.count) * 100
+}
+
+wordProbabilities
 /*:
 
 ## Goal 3
